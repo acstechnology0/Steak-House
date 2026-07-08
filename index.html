@@ -13,7 +13,7 @@
 <meta property="og:type" content="restaurant" />
 <meta property="og:title" content="Steak House | El auténtico Cheesesteak llegó al Istmo" />
 <meta property="og:description" content="Carne premium. Preparado al momento. Hecho con pasión. Pensado para ti. Ordena tu Cheesesteak por WhatsApp." />
-<meta property="og:image" content="imagenes/logo-steak-house.jpg" />
+<meta property="og:image" content="assets/img/og-cover.jpg" />
 <meta property="og:locale" content="es_MX" />
 <meta property="og:site_name" content="Steak House" />
 
@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Steak House | El auténtico Cheesesteak llegó al Istmo" />
 <meta name="twitter:description" content="Carne premium. Preparado al momento. Hecho con pasión. Pensado para ti." />
-<meta name="twitter:image" content="imagenes/logo-steak-house.jpg" />
+<meta name="twitter:image" content="assets/img/og-cover.jpg" />
 
 <!-- Schema.org -->
 <script type="application/ld+json">
@@ -46,8 +46,7 @@
 }
 </script>
 
-<link rel="icon" type="image/jpeg" href="imagenes/logo-steak-house.jpg" />
-<link rel="apple-touch-icon" href="imagenes/logo-steak-house.jpg" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥩</text></svg>" />
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -277,18 +276,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-size:1.5rem;
   letter-spacing:.08em;
   color:var(--white);
-  display:flex;
-  align-items:center;
-  gap:10px;
 }
 .sh-logo span{ color:var(--gold); }
-.sh-logo-img{
-  width:38px; height:38px;
-  border-radius:50%;
-  object-fit:cover;
-  border:1.5px solid var(--gold);
-}
-.footer-logo .sh-logo-img{ width:34px; height:34px; }
 .sh-links{
   display:flex; gap:34px;
   flex:1;
@@ -368,12 +357,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   display:flex; align-items:center; justify-content:center;
   overflow:hidden;
 }
-.hero-photo-img{
-  position:relative; z-index:1;
-  width:100%; height:100%;
-  object-fit:cover;
-  object-position:center;
+.hero-photo-placeholder{
+  text-align:center; color:var(--gray); padding:30px;
 }
+.hero-photo-placeholder i{ font-size:3rem; color:var(--gold); margin-bottom:14px; }
+.hero-photo-placeholder p{ font-size:.85rem; line-height:1.5; }
+.hero-photo-placeholder span{ color:var(--gold-light); font-size:.75rem; }
 .hero-smoke{
   position:absolute; bottom:-20%; left:50%; width:180%; height:60%;
   background:radial-gradient(ellipse at center, rgba(255,255,255,0.06), transparent 70%);
@@ -469,11 +458,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   background:radial-gradient(circle at 30% 20%, rgba(255,193,7,0.12), transparent 60%);
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   color:var(--gray); border-bottom:1px solid rgba(200,155,60,0.15);
-  overflow:hidden;
-}
-.product-img-real{
-  width:100%; height:100%;
-  object-fit:cover; object-position:center;
 }
 .product-img-placeholder i{ font-size:2.4rem; color:var(--gold); margin-bottom:8px; }
 .product-img-placeholder span{ font-size:.72rem; color:var(--gold-light); }
@@ -808,10 +792,7 @@ address{
 <!-- ================= NAV ================= -->
 <nav class="sh-nav" id="shNav">
   <div class="sh-nav-inner">
-    <a href="#inicio" class="sh-logo">
-      <img src="imagenes/logo-steak-house.jpg" alt="Steak House" class="sh-logo-img" />
-      STEAK <span>HOUSE</span>
-    </a>
+    <a href="#inicio" class="sh-logo">STEAK <span>HOUSE</span></a>
     <button class="sh-burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -834,7 +815,9 @@ address{
   <div class="hero-grate" aria-hidden="true"></div>
   <div class="hero-media">
     <div class="hero-photo-frame" data-tilt data-tilt-max="6" data-tilt-speed="600" data-tilt-glare data-tilt-max-glare="0.25">
-      <img class="hero-photo-img" src="imagenes/logo-steak-house.jpg" alt="Steak House - Cheesesteak premium" />
+      <div class="hero-photo">
+    <img src="imagenes/logo-steak-house.jpg" alt="Cheesesteak Clásico">
+</div>
       <div class="hero-smoke" aria-hidden="true"></div>
     </div>
   </div>
@@ -886,11 +869,11 @@ address{
 
     <div class="products-grid">
 
-      <!-- Producto 1 -->
-      <article class="product-card" data-aos="fade-up" data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.15">
-        <div class="product-img-placeholder">
-          <img src="imagenes/clasico.jpg" alt="Cheesesteak Clásico Steak House" class="product-img-real" />
-        </div>
+     <!-- Producto 1 -->
+<article class="product-card" data-aos="fade-up" data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.15">
+    <div class="product-img-placeholder">
+        <img src="imagenes/clasico.jpg" alt="Cheesesteak Clásico">
+    </div>
         <div class="product-body">
           <h3>Cheesesteak Clásico</h3>
           <p class="product-desc">Carne de res premium, salteada al momento con cebolla y pimiento, bañada en nuestra salsa de queso artesanal y servida con pan artesanal.</p>
@@ -921,11 +904,11 @@ address{
       </article>
 
       <!-- Producto 2: Combo -->
-      <article class="product-card featured" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.15">
-        <span class="badge-featured">Más pedido</span>
-        <div class="product-img-placeholder">
-          <img src="imagenes/combo.jpg" alt="Combo Cheesesteak Steak House" class="product-img-real" />
-        </div>
+<article class="product-card featured" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.15">
+    <span class="badge-featured">Más pedido</span>
+    <div class="product-img-placeholder">
+        <img src="imagenes/combo.jpg" alt="Combo Cheesesteak">
+    </div>
         <div class="product-body">
           <h3>Combo Cheesesteak</h3>
           <p class="product-desc">Incluye Cheesesteak Clásico + papas a la francesa + una bebida de 477 ml a elegir.</p>
@@ -1044,12 +1027,8 @@ address{
     <div class="gallery-grid">
       <div class="gallery-item" data-aos="fade-up" data-tilt data-tilt-max="10"><i class="fa-solid fa-burger"></i><span>Cheesesteak</span></div>
       <div class="gallery-item" data-aos="fade-up" data-aos-delay="50" data-tilt data-tilt-max="10"><i class="fa-solid fa-drumstick-bite"></i><span>Carne</span></div>
-      <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="10"><i class="fa-solid fa-fries"></i><span>Papas</span></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="10"><i class="fa-solid fa-fries"></i><span>Papas Crujientes</span></div>
       <div class="gallery-item" data-aos="fade-up" data-aos-delay="150" data-tilt data-tilt-max="10"><i class="fa-solid fa-cheese"></i><span>Queso</span></div>
-      <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="10"><i class="fa-solid fa-carrot"></i><span>Ingredientes</span></div>
-      <div class="gallery-item" data-aos="fade-up" data-aos-delay="250" data-tilt data-tilt-max="10"><i class="fa-solid fa-fire-flame-curved"></i><span>Preparación</span></div>
-      <div class="gallery-item" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="10"><i class="fa-solid fa-kitchen-set"></i><span>Cocina</span></div>
-      <div class="gallery-item" data-aos="fade-up" data-aos-delay="350" data-tilt data-tilt-max="10"><i class="fa-solid fa-plate-wheat"></i><span>Producto Terminado</span></div>
     </div>
     <p class="gallery-note">* Reemplazar cada tarjeta con fotografías reales en <code>/assets/img/galeria-*.jpg</code></p>
   </div>
@@ -1086,13 +1065,14 @@ address{
 <footer class="sh-footer">
   <div class="wrap footer-grid">
     <div>
-      <p class="sh-logo footer-logo"><img src="imagenes/logo-steak-house.jpg" alt="Steak House" class="sh-logo-img" /> STEAK <span>HOUSE</span></p>
+      <p class="sh-logo footer-logo">STEAK <span>HOUSE</span></p>
       <p>San Blas Atempa, Oaxaca</p>
       <p>Pedidos vía WhatsApp</p>
     </div>
     <div>
       <h4>Horario</h4>
-      <p>Lun – Dom: 5:00 pm – 11:00 pm</p>
+      <p>Lun – Vie: 9:00 am – 4:00 pm</p>
+       <p>Sab – Dom: 9:00 am – 2:00 pm</p>
     </div>
     <div>
       <h4>Ubicación</h4>
