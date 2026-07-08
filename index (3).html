@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+<title>Steak House | El auténtico Cheesesteak llegó al Istmo — San Blas Atempa, Oaxaca</title>
+<meta name="description" content="Steak House: el auténtico Cheesesteak americano premium en San Blas Atempa, Oaxaca. Carne premium, queso derretido, preparado al momento. Ordena por WhatsApp." />
+<meta name="keywords" content="Cheesesteak Oaxaca, Cheesesteak Istmo, Steak House, Cheesesteak San Blas Atempa, Comida Americana Oaxaca, Cheesesteak Premium" />
+<meta name="author" content="Steak House" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="restaurant" />
+<meta property="og:title" content="Steak House | El auténtico Cheesesteak llegó al Istmo" />
+<meta property="og:description" content="Carne premium. Preparado al momento. Hecho con pasión. Pensado para ti. Ordena tu Cheesesteak por WhatsApp." />
+<meta property="og:image" content="assets/img/og-cover.jpg" />
+<meta property="og:locale" content="es_MX" />
+<meta property="og:site_name" content="Steak House" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Steak House | El auténtico Cheesesteak llegó al Istmo" />
+<meta name="twitter:description" content="Carne premium. Preparado al momento. Hecho con pasión. Pensado para ti." />
+<meta name="twitter:image" content="assets/img/og-cover.jpg" />
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Steak House",
+  "servesCuisine": "American, Cheesesteak",
+  "priceRange": "$$",
+  "telephone": "+529711362099",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Morelos s/n, Colonia Centro",
+    "addressLocality": "San Blas Atempa",
+    "addressRegion": "Oaxaca",
+    "postalCode": "70786",
+    "addressCountry": "MX"
+  },
+  "servesCuisine": "Cheesesteak",
+  "menu": "https://steakhouse.mx/#menu",
+  "acceptsReservations": "False"
+}
+</script>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥩</text></svg>" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --black: #0F0F0F;
+  --panel: #1A1A1A;
+  --panel-2: #242424;
+  --gold: #C89B3C;
+  --gold-light: #E7C978;
+  --amber: #FFC107;
+  --white: #FFFFFF;
+  --gray: #B8B4AC;
+  --grate: rgba(200,155,60,0.16);
+
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --radius: 14px;
+  --shadow-soft: 0 20px 60px rgba(0,0,0,0.45);
+  --shadow-gold: 0 10px 30px rgba(200,155,60,0.25);
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--black);
+  color:var(--white);
+  font-family:var(--font-body);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;margin:0;padding:0;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
+}
+
+/* focus visibility */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+  outline:2px solid var(--amber);
+  outline-offset:3px;
+}
+
+/* ============ TYPOGRAPHY ============ */
+.eyebrow{
+  font-family:var(--font-body);
+  text-transform:uppercase;
+  letter-spacing:.22em;
+  font-size:.72rem;
+  font-weight:700;
+  color:var(--gold-light);
+  margin:0 0 10px;
+}
+.section-title{
+  font-family:var(--font-display);
+  font-size:clamp(2.2rem, 4.5vw, 3.4rem);
+  letter-spacing:.02em;
+  line-height:1.05;
+  margin:0 0 18px;
+  color:var(--white);
+}
+.lead-text{
+  font-size:1.15rem;
+  font-weight:600;
+  color:var(--gold-light);
+  margin:0 0 12px;
+}
+.quote-line{
+  font-style:italic;
+  color:var(--gray);
+  border-left:3px solid var(--gold);
+  padding-left:16px;
+  margin-top:20px;
+}
+.gold-shine{
+  background:linear-gradient(100deg, var(--gold) 0%, var(--amber) 30%, var(--gold-light) 50%, var(--gold) 70%);
+  background-size:250% auto;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation:shine 5s linear infinite;
+}
+@keyframes shine{
+  to{ background-position:250% center; }
+}
+
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:15px 30px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:.95rem;
+  border:none;
+  cursor:pointer;
+  transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+  white-space:nowrap;
+}
+.btn:active{ transform:scale(.97); }
+.btn-gold{
+  background:linear-gradient(135deg, var(--gold-light), var(--gold));
+  color:#1a1305;
+  box-shadow:var(--shadow-gold);
+}
+.btn-gold:hover{
+  box-shadow:0 14px 40px rgba(255,193,7,0.4);
+  transform:translateY(-2px);
+}
+.btn-ghost{
+  background:transparent;
+  color:var(--white);
+  border:1.5px solid rgba(255,255,255,0.35);
+}
+.btn-ghost:hover{
+  border-color:var(--gold);
+  color:var(--gold-light);
+}
+.btn.small{ padding:10px 18px; font-size:.82rem; }
+
+/* ============ AMBIENT BACKGROUND ============ */
+.ambient{
+  position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden;
+}
+.ambient-fog{
+  position:absolute;
+  width:140vw; height:60vh;
+  background:radial-gradient(ellipse at center, rgba(200,155,60,0.10), transparent 70%);
+  filter:blur(30px);
+  animation:driftFog 26s ease-in-out infinite;
+}
+.fog-1{ top:-10%; left:-20%; animation-delay:0s; }
+.fog-2{ bottom:-15%; right:-25%; animation-duration:32s; animation-delay:-8s; }
+@keyframes driftFog{
+  0%,100%{ transform:translate(0,0) scale(1); }
+  50%{ transform:translate(6%,4%) scale(1.08); }
+}
+.ambient-glow{
+  position:absolute; border-radius:50%;
+  filter:blur(80px); opacity:.35;
+}
+.glow-1{ width:420px; height:420px; top:8%; right:6%; background:var(--amber); animation:pulseGlow 8s ease-in-out infinite; }
+.glow-2{ width:360px; height:360px; bottom:12%; left:4%; background:var(--gold); animation:pulseGlow 10s ease-in-out infinite reverse; }
+@keyframes pulseGlow{
+  0%,100%{ opacity:.22; transform:scale(1); }
+  50%{ opacity:.42; transform:scale(1.15); }
+}
+.embers span{
+  position:absolute;
+  bottom:-10px;
+  width:3px; height:3px;
+  border-radius:50%;
+  background:var(--amber);
+  box-shadow:0 0 6px 2px rgba(255,193,7,0.7);
+  animation-name:emberRise;
+  animation-timing-function:ease-in;
+  animation-iteration-count:infinite;
+  opacity:0;
+}
+@keyframes emberRise{
+  0%{ transform:translateY(0) translateX(0); opacity:0; }
+  10%{ opacity:.9; }
+  100%{ transform:translateY(-100vh) translateX(20px); opacity:0; }
+}
+
+/* grate texture — signature element */
+.grate-divider{
+  position:relative;
+  height:70px;
+  background-image:repeating-linear-gradient(
+    100deg,
+    var(--grate) 0px, var(--grate) 2px,
+    transparent 2px, transparent 26px
+  );
+  opacity:.7;
+}
+.hero-grate{
+  position:absolute; inset:0;
+  background-image:repeating-linear-gradient(
+    115deg,
+    rgba(200,155,60,0.05) 0px, rgba(200,155,60,0.05) 1px,
+    transparent 1px, transparent 34px
+  );
+  pointer-events:none;
+}
+.frase-grate{
+  position:absolute; inset:0;
+  background-image:repeating-linear-gradient(
+    70deg,
+    rgba(0,0,0,0.15) 0px, rgba(0,0,0,0.15) 2px,
+    transparent 2px, transparent 22px
+  );
+  pointer-events:none;
+}
+
+/* ============ NAV ============ */
+.sh-nav{
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  background:rgba(15,15,15,0.55);
+  backdrop-filter:blur(14px) saturate(140%);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);
+  border-bottom:1px solid rgba(200,155,60,0.15);
+  transition:background .3s ease, padding .3s ease;
+}
+.sh-nav-inner{
+  max-width:1180px; margin:0 auto; padding:16px 24px;
+  display:flex; align-items:center; justify-content:space-between; gap:20px;
+}
+.sh-logo{
+  font-family:var(--font-display);
+  font-size:1.5rem;
+  letter-spacing:.08em;
+  color:var(--white);
+}
+.sh-logo span{ color:var(--gold); }
+.sh-links{
+  display:flex; gap:34px;
+  flex:1;
+  justify-content:center;
+}
+.nav-link-item{
+  font-size:.85rem;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:var(--gray);
+  position:relative;
+  padding-bottom:4px;
+  transition:color .25s ease;
+}
+.nav-link-item::after{
+  content:"";
+  position:absolute; left:0; bottom:0; height:2px; width:0;
+  background:var(--gold);
+  transition:width .3s ease;
+}
+.nav-link-item:hover{ color:var(--white); }
+.nav-link-item:hover::after{ width:100%; }
+
+.sh-cart-btn{
+  position:relative;
+  background:rgba(200,155,60,0.12);
+  border:1px solid rgba(200,155,60,0.4);
+  color:var(--gold-light);
+  width:44px; height:44px;
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  cursor:pointer;
+  transition:transform .2s ease, background .2s ease;
+}
+.sh-cart-btn:hover{ background:rgba(200,155,60,0.25); transform:translateY(-2px); }
+.cart-count{
+  position:absolute; top:-6px; right:-6px;
+  background:var(--amber); color:#1a1305;
+  font-size:.7rem; font-weight:800;
+  width:20px; height:20px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+}
+.sh-burger{
+  display:none;
+  background:none; border:none; cursor:pointer;
+  flex-direction:column; gap:5px;
+  width:30px;
+}
+.sh-burger span{
+  display:block; height:2px; width:100%; background:var(--white);
+  transition:transform .3s ease, opacity .3s ease;
+}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex; align-items:center;
+  padding:140px 24px 100px;
+  overflow:hidden;
+}
+.hero-media{
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:flex-end;
+  padding-right:4%;
+  opacity:.9;
+}
+.hero-photo-frame{
+  position:relative;
+  width:min(46vw, 620px);
+  aspect-ratio: 4/5;
+  border-radius:28px;
+  background:radial-gradient(circle at 35% 30%, rgba(255,193,7,0.18), transparent 60%), var(--panel);
+  border:1px solid rgba(200,155,60,0.25);
+  box-shadow:var(--shadow-soft);
+  display:flex; align-items:center; justify-content:center;
+  overflow:hidden;
+}
+.hero-photo-placeholder{
+  text-align:center; color:var(--gray); padding:30px;
+}
+.hero-photo-placeholder i{ font-size:3rem; color:var(--gold); margin-bottom:14px; }
+.hero-photo-placeholder p{ font-size:.85rem; line-height:1.5; }
+.hero-photo-placeholder span{ color:var(--gold-light); font-size:.75rem; }
+.hero-smoke{
+  position:absolute; bottom:-20%; left:50%; width:180%; height:60%;
+  background:radial-gradient(ellipse at center, rgba(255,255,255,0.06), transparent 70%);
+  transform:translateX(-50%);
+  animation:smokeDrift 9s ease-in-out infinite;
+  filter:blur(18px);
+}
+@keyframes smokeDrift{
+  0%,100%{ opacity:.4; transform:translate(-50%,0) scale(1); }
+  50%{ opacity:.7; transform:translate(-48%,-6%) scale(1.1); }
+}
+
+.hero-content{
+  position:relative; z-index:2;
+  max-width:640px;
+}
+.hero-title{
+  font-family:var(--font-display);
+  font-size:clamp(3rem, 7vw, 5.4rem);
+  line-height:.98;
+  letter-spacing:.01em;
+  margin:0 0 22px;
+}
+.hero-sub{
+  font-size:1.15rem;
+  color:var(--gray);
+  max-width:460px;
+  margin:0 0 34px;
+}
+.hero-actions{ display:flex; gap:16px; flex-wrap:wrap; }
+
+.scroll-cue{
+  position:absolute; bottom:34px; left:24px;
+  width:26px; height:42px; border:2px solid rgba(255,255,255,0.35);
+  border-radius:20px;
+}
+.scroll-cue span{
+  position:absolute; top:6px; left:50%; transform:translateX(-50%);
+  width:4px; height:8px; border-radius:2px; background:var(--gold);
+  animation:scrollDot 1.8s ease-in-out infinite;
+}
+@keyframes scrollDot{
+  0%{ opacity:1; top:6px; }
+  100%{ opacity:0; top:22px; }
+}
+
+/* ============ GENERIC SECTION ============ */
+.section{ position:relative; padding:110px 0; z-index:1; }
+.section-head{ text-align:center; max-width:640px; margin:0 auto 56px; }
+.section-head .section-title{ margin-bottom:0; }
+
+/* ============ HISTORIA ============ */
+.historia-grid{
+  display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px; align-items:center;
+}
+.img-placeholder{
+  border-radius:var(--radius);
+  background:var(--panel);
+  border:1px dashed rgba(200,155,60,0.35);
+  min-height:340px;
+  display:flex; align-items:center; justify-content:center; text-align:center;
+  color:var(--gray); padding:30px;
+}
+.img-placeholder.small{ min-height:280px; }
+.img-placeholder i{ font-size:2.4rem; color:var(--gold); display:block; margin-bottom:12px; }
+.img-placeholder span{ color:var(--gold-light); font-size:.78rem; }
+
+/* ============ MENU ============ */
+.products-grid{
+  display:grid; grid-template-columns:repeat(2, 1fr); gap:36px;
+}
+.product-card{
+  position:relative;
+  background:linear-gradient(180deg, var(--panel-2), var(--panel));
+  border:1px solid rgba(200,155,60,0.18);
+  border-radius:var(--radius);
+  overflow:hidden;
+  transition:box-shadow .3s ease, border-color .3s ease;
+}
+.product-card:hover{
+  box-shadow:var(--shadow-gold);
+  border-color:rgba(200,155,60,0.5);
+}
+.product-card.featured{ border-color:var(--gold); }
+.badge-featured{
+  position:absolute; top:16px; right:16px; z-index:2;
+  background:var(--amber); color:#1a1305;
+  font-size:.7rem; font-weight:800; text-transform:uppercase; letter-spacing:.05em;
+  padding:6px 12px; border-radius:999px;
+}
+.product-img-placeholder{
+  height:200px;
+  background:radial-gradient(circle at 30% 20%, rgba(255,193,7,0.12), transparent 60%);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  color:var(--gray); border-bottom:1px solid rgba(200,155,60,0.15);
+}
+.product-img-placeholder i{ font-size:2.4rem; color:var(--gold); margin-bottom:8px; }
+.product-img-placeholder span{ font-size:.72rem; color:var(--gold-light); }
+.product-body{ padding:28px; }
+.product-body h3{
+  font-family:var(--font-display);
+  font-size:1.7rem; letter-spacing:.02em; margin:0 0 10px;
+}
+.product-desc{ color:var(--gray); font-size:.92rem; line-height:1.6; margin:0 0 18px; }
+.combo-includes{ margin:0 0 18px; display:flex; flex-direction:column; gap:6px; }
+.combo-includes li{ font-size:.88rem; color:var(--white); }
+.combo-includes i{ color:var(--gold); margin-right:8px; }
+
+.extras-box{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:10px;
+  padding:14px 16px;
+  margin-bottom:20px;
+}
+.extras-title{
+  font-size:.72rem; text-transform:uppercase; letter-spacing:.1em;
+  color:var(--gold-light); margin:0 0 10px; font-weight:700;
+}
+.extra-row{
+  display:flex; align-items:center; justify-content:space-between;
+  font-size:.88rem; padding:6px 0; cursor:pointer; color:var(--gray);
+}
+.extra-row input{ accent-color:var(--gold); margin-right:10px; }
+.extra-price{ color:var(--gold-light); font-weight:600; }
+
+.product-footer{
+  display:flex; align-items:center; justify-content:space-between; gap:14px;
+}
+.price{ font-family:var(--font-display); font-size:1.6rem; color:var(--gold-light); letter-spacing:.02em; }
+
+/* ============ HECHO AL MOMENTO ============ */
+.hecho-grid{
+  display:grid; grid-template-columns:1fr 0.9fr; gap:60px; align-items:center;
+}
+.checklist{ display:flex; flex-direction:column; gap:10px; margin-top:20px; }
+.checklist li{ font-size:1rem; color:var(--white); display:flex; align-items:center; gap:10px; }
+.checklist i.fa-xmark{ color:#c0392b; }
+.checklist i.fa-check{ color:var(--gold); }
+
+/* ============ FRASE DESTACADA ============ */
+.frase-destacada{
+  position:relative;
+  padding:120px 24px;
+  text-align:center;
+  background:linear-gradient(180deg, #000000, #150f05 50%, #000000);
+  overflow:hidden;
+}
+.frase-destacada h2{
+  position:relative; z-index:1;
+  font-family:var(--font-display);
+  font-size:clamp(1.8rem, 5vw, 3.6rem);
+  line-height:1.35;
+  letter-spacing:.03em;
+  margin:0;
+}
+.frase-destacada h2 span{
+  display:block;
+  background:linear-gradient(90deg, var(--gold), var(--amber), var(--gold-light));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+  text-shadow:0 0 40px rgba(255,193,7,0.25);
+}
+
+/* ============ BENEFICIOS ============ */
+.beneficios-grid{
+  display:grid; grid-template-columns:repeat(3, 1fr); gap:24px;
+}
+.beneficio-card{
+  background:var(--panel);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:var(--radius);
+  padding:34px 20px;
+  text-align:center;
+  transition:transform .3s ease, border-color .3s ease;
+}
+.beneficio-card:hover{
+  transform:translateY(-6px);
+  border-color:var(--gold);
+}
+.beneficio-card i{ font-size:2rem; color:var(--gold); margin-bottom:14px; }
+.beneficio-card h3{ font-size:1rem; font-weight:600; margin:0; }
+
+/* ============ GALERIA ============ */
+.gallery-grid{
+  display:grid; grid-template-columns:repeat(4, 1fr); gap:18px;
+}
+.gallery-item{
+  aspect-ratio:1;
+  background:linear-gradient(160deg, var(--panel-2), var(--panel));
+  border:1px solid rgba(200,155,60,0.15);
+  border-radius:12px;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:10px;
+  color:var(--gray);
+  transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  cursor:pointer;
+}
+.gallery-item i{ font-size:1.8rem; color:var(--gold); }
+.gallery-item span{ font-size:.78rem; font-weight:600; color:var(--white); }
+.gallery-item:hover{
+  transform:translateY(-4px) scale(1.03);
+  box-shadow:var(--shadow-gold);
+  border-color:var(--gold);
+}
+.gallery-note{ text-align:center; color:var(--gray); font-size:.78rem; margin-top:24px; }
+.gallery-note code{ color:var(--gold-light); }
+
+/* ============ UBICACION ============ */
+.ubicacion-grid{
+  display:grid; grid-template-columns:0.8fr 1.2fr; gap:50px; align-items:center;
+}
+address{
+  font-style:normal; color:var(--gray); line-height:1.8; margin:0 0 26px; font-size:1.02rem;
+}
+.map-frame{
+  height:360px; border-radius:var(--radius); overflow:hidden;
+  border:1px solid rgba(200,155,60,0.25);
+  filter:grayscale(0.15) contrast(1.05);
+}
+
+/* ============ FOOTER ============ */
+.sh-footer{
+  background:#080808;
+  border-top:1px solid rgba(200,155,60,0.15);
+  padding:70px 0 0;
+}
+.footer-grid{
+  display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:30px;
+  padding-bottom:40px;
+}
+.footer-logo{ margin-bottom:14px; }
+.sh-footer h4{
+  font-size:.82rem; text-transform:uppercase; letter-spacing:.08em;
+  color:var(--gold-light); margin:0 0 12px;
+}
+.sh-footer p, .sh-footer a{ color:var(--gray); font-size:.9rem; margin:0 0 6px; }
+.sh-footer a:hover{ color:var(--gold-light); }
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,0.06);
+  text-align:center; padding:20px 0; font-size:.8rem; color:var(--gray);
+}
+
+/* ============ FLOATING WHATSAPP ============ */
+.wa-float{
+  position:fixed; right:24px; bottom:24px; z-index:90;
+  background:#25D366; color:#04180a;
+  display:flex; align-items:center; gap:10px;
+  padding:14px 20px; border-radius:999px;
+  font-weight:800; font-size:.9rem;
+  box-shadow:0 12px 30px rgba(37,211,102,0.4);
+  transition:transform .25s ease;
+}
+.wa-float i{ font-size:1.3rem; }
+.wa-float:hover{ transform:translateY(-3px) scale(1.03); }
+@keyframes waPulse{
+  0%{ box-shadow:0 0 0 0 rgba(37,211,102,0.5); }
+  70%{ box-shadow:0 0 0 16px rgba(37,211,102,0); }
+  100%{ box-shadow:0 0 0 0 rgba(37,211,102,0); }
+}
+.wa-float{ animation:waPulse 2.6s ease-out infinite; }
+
+/* ============ MODAL (bebida) ============ */
+.modal-overlay{
+  position:fixed; inset:0; z-index:200;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(6px);
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; pointer-events:none;
+  transition:opacity .3s ease;
+  padding:20px;
+}
+.modal-overlay.active{ opacity:1; pointer-events:auto; }
+.modal-box{
+  background:var(--panel-2);
+  border:1px solid rgba(200,155,60,0.3);
+  border-radius:18px;
+  padding:34px;
+  max-width:420px; width:100%;
+  transform:translateY(20px) scale(.97);
+  transition:transform .3s ease;
+  box-shadow:var(--shadow-soft);
+}
+.modal-overlay.active .modal-box{ transform:translateY(0) scale(1); }
+.modal-box h3{ font-family:var(--font-display); font-size:1.5rem; margin:0 0 6px; letter-spacing:.02em; }
+.modal-sub{ color:var(--gray); font-size:.85rem; margin:0 0 20px; }
+.drink-options{ display:flex; flex-direction:column; gap:10px; margin-bottom:8px; }
+.drink-option{
+  display:flex; align-items:center; gap:12px;
+  background:rgba(255,255,255,0.03);
+  border:1.5px solid rgba(255,255,255,0.08);
+  border-radius:10px; padding:12px 16px; cursor:pointer;
+  transition:border-color .2s ease, background .2s ease;
+}
+.drink-option:has(input:checked){
+  border-color:var(--gold); background:rgba(200,155,60,0.1);
+}
+.drink-option input{ accent-color:var(--gold); }
+.drink-option i{ color:var(--gold); margin-right:6px; }
+.drink-error{
+  color:#ff6b6b; font-size:.8rem; margin:8px 0 0; display:none;
+}
+.drink-error.show{ display:block; }
+.modal-actions{ display:flex; gap:12px; margin-top:22px; justify-content:flex-end; }
+
+/* ============ CART DRAWER ============ */
+.cart-overlay{
+  position:fixed; inset:0; background:rgba(0,0,0,0.6);
+  z-index:150; opacity:0; pointer-events:none; transition:opacity .3s ease;
+}
+.cart-overlay.active{ opacity:1; pointer-events:auto; }
+.cart-drawer{
+  position:fixed; top:0; right:0; height:100vh; width:min(420px, 92vw);
+  background:var(--panel-2); border-left:1px solid rgba(200,155,60,0.25);
+  z-index:160;
+  transform:translateX(100%);
+  transition:transform .35s cubic-bezier(.4,0,.2,1);
+  display:flex; flex-direction:column;
+  box-shadow:-20px 0 60px rgba(0,0,0,0.5);
+}
+.cart-drawer.active{ transform:translateX(0); }
+.cart-header{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:22px 24px; border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.cart-header h3{ font-family:var(--font-display); font-size:1.3rem; letter-spacing:.02em; margin:0; display:flex; gap:10px; align-items:center; }
+.cart-close{
+  background:none; border:none; color:var(--gray); font-size:1.6rem; cursor:pointer; line-height:1;
+}
+.cart-close:hover{ color:var(--white); }
+.cart-items{
+  flex:1; overflow-y:auto; padding:20px 24px;
+  display:flex; flex-direction:column; gap:14px;
+}
+.cart-empty{ color:var(--gray); text-align:center; margin-top:40px; font-size:.9rem; }
+.cart-item{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:10px; padding:14px;
+  animation:itemIn .3s ease;
+}
+@keyframes itemIn{ from{ opacity:0; transform:translateY(8px); } to{ opacity:1; transform:translateY(0); } }
+.cart-item-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:10px; }
+.cart-item-name{ font-weight:700; font-size:.95rem; }
+.cart-item-extras{ color:var(--gray); font-size:.78rem; margin-top:4px; }
+.cart-item-remove{
+  background:none; border:none; color:#ff6b6b; cursor:pointer; font-size:.95rem;
+}
+.cart-item-bottom{
+  display:flex; align-items:center; justify-content:space-between; margin-top:10px;
+}
+.qty-control{ display:flex; align-items:center; gap:10px; }
+.qty-btn{
+  width:26px; height:26px; border-radius:50%; border:1px solid rgba(255,255,255,0.15);
+  background:transparent; color:var(--white); cursor:pointer; font-weight:700;
+}
+.qty-btn:hover{ border-color:var(--gold); color:var(--gold-light); }
+.cart-item-price{ color:var(--gold-light); font-weight:700; }
+
+.cart-footer{
+  border-top:1px solid rgba(255,255,255,0.08);
+  padding:20px 24px 24px;
+}
+.cart-fields{ display:flex; flex-direction:column; gap:10px; margin-bottom:16px; }
+.cart-fields input, .cart-fields textarea{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:8px; color:var(--white); padding:10px 12px; font-family:var(--font-body);
+  font-size:.88rem; resize:vertical;
+}
+.cart-fields input:focus, .cart-fields textarea:focus{ border-color:var(--gold); outline:none; }
+.cart-totals{ margin-bottom:16px; }
+.cart-row{ display:flex; justify-content:space-between; font-size:.9rem; color:var(--gray); padding:4px 0; }
+.cart-row.total{ font-size:1.1rem; color:var(--white); font-weight:800; border-top:1px solid rgba(255,255,255,0.08); margin-top:6px; padding-top:10px; }
+.cart-actions{ display:flex; gap:10px; }
+.cart-actions .btn-gold{ flex:1; justify-content:center; }
+
+/* ============ TOAST ============ */
+.toast{
+  position:fixed; left:50%; bottom:100px; transform:translateX(-50%) translateY(20px);
+  background:var(--gold-light); color:#1a1305; font-weight:700; font-size:.88rem;
+  padding:12px 22px; border-radius:999px; z-index:300;
+  opacity:0; pointer-events:none; transition:opacity .3s ease, transform .3s ease;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+.toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 980px){
+  .historia-grid, .hecho-grid, .ubicacion-grid{ grid-template-columns:1fr; }
+  .products-grid{ grid-template-columns:1fr; }
+  .beneficios-grid{ grid-template-columns:repeat(2,1fr); }
+  .gallery-grid{ grid-template-columns:repeat(3,1fr); }
+  .footer-grid{ grid-template-columns:1fr 1fr; }
+  .hero-media{ opacity:.22; padding-right:0; justify-content:center; }
+  .hero-photo-frame{ width:80vw; }
+}
+
+@media (max-width: 700px){
+  .sh-links{
+    position:fixed; top:72px; left:0; right:0;
+    background:rgba(15,15,15,0.98);
+    flex-direction:column; align-items:center; gap:0;
+    max-height:0; overflow:hidden; transition:max-height .35s ease;
+  }
+  .sh-links.open{ max-height:320px; padding:10px 0; }
+  .sh-links li{ width:100%; text-align:center; padding:14px 0; }
+  .sh-burger{ display:flex; }
+  .gallery-grid{ grid-template-columns:repeat(2,1fr); }
+  .beneficios-grid{ grid-template-columns:1fr; }
+  .footer-grid{ grid-template-columns:1fr; text-align:center; }
+  .frase-destacada h2{ font-size:2rem; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ================= AMBIENT BACKGROUND ================= -->
+<div class="ambient" aria-hidden="true">
+  <div class="ambient-fog fog-1"></div>
+  <div class="ambient-fog fog-2"></div>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="embers" id="embers"></div>
+</div>
+
+<!-- ================= NAV ================= -->
+<nav class="sh-nav" id="shNav">
+  <div class="sh-nav-inner">
+    <a href="#inicio" class="sh-logo">STEAK <span>HOUSE</span></a>
+    <button class="sh-burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="sh-links" id="navLinks">
+      <li><a href="#inicio" class="nav-link-item">Inicio</a></li>
+      <li><a href="#historia" class="nav-link-item">Historia</a></li>
+      <li><a href="#menu" class="nav-link-item">Menú</a></li>
+      <li><a href="#galeria" class="nav-link-item">Galería</a></li>
+      <li><a href="#ubicacion" class="nav-link-item">Ubicación</a></li>
+    </ul>
+    <button class="sh-cart-btn" id="openCartBtn" aria-label="Abrir carrito">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="inicio">
+  <div class="hero-grate" aria-hidden="true"></div>
+  <div class="hero-media">
+    <div class="hero-photo-frame" data-tilt data-tilt-max="6" data-tilt-speed="600" data-tilt-glare data-tilt-max-glare="0.25">
+      <div class="hero-photo-placeholder">
+        <i class="fa-solid fa-camera"></i>
+        <p>Foto hero: Cheesesteak con queso derretido<br><span>reemplazar con /assets/img/hero-cheesesteak.jpg</span></p>
+      </div>
+      <div class="hero-smoke" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <p class="eyebrow" data-aos="fade-up">Nuevo en el Istmo de Tehuantepec</p>
+    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+      El auténtico <span class="gold-shine">Cheesesteak</span><br>llegó al Istmo.
+    </h1>
+    <p class="hero-sub" data-aos="fade-up" data-aos-delay="200">
+      Cada orden se prepara al momento utilizando ingredientes frescos y carne premium.
+    </p>
+    <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+      <a href="#menu" class="btn btn-gold">Ordenar ahora</a>
+      <a href="#menu" class="btn btn-ghost">Ver menú</a>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"><span></span></div>
+</header>
+
+<!-- ================= HISTORIA ================= -->
+<section class="section historia" id="historia">
+  <div class="wrap historia-grid">
+    <div class="historia-visual" data-aos="fade-right">
+      <div class="img-placeholder small" data-tilt data-tilt-max="8">
+        <i class="fa-solid fa-fire-flame-curved"></i>
+        <p>Foto: preparación en plancha<br><span>/assets/img/preparacion.jpg</span></p>
+      </div>
+    </div>
+    <div class="historia-text" data-aos="fade-left">
+      <p class="eyebrow">Nuestra filosofía</p>
+      <h2 class="section-title">No vendemos solo un sándwich...</h2>
+      <p class="lead-text">Creamos una experiencia.</p>
+      <p>Cada Cheesesteak se prepara al momento utilizando carne premium, vegetales frescos y nuestra exclusiva salsa de queso artesanal.</p>
+      <p class="quote-line">Porque creemos que la calidad comienza desde el primer ingrediente.</p>
+    </div>
+  </div>
+</section>
+
+<div class="grate-divider" aria-hidden="true"></div>
+
+<!-- ================= MENU ================= -->
+<section class="section menu-section" id="menu">
+  <div class="wrap">
+    <div class="section-head" data-aos="fade-up">
+      <p class="eyebrow">Menú</p>
+      <h2 class="section-title">Elige tu Cheesesteak</h2>
+    </div>
+
+    <div class="products-grid">
+
+      <!-- Producto 1 -->
+      <article class="product-card" data-aos="fade-up" data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.15">
+        <div class="product-img-placeholder">
+          <i class="fa-solid fa-burger"></i>
+          <p><span>/assets/img/clasico.jpg</span></p>
+        </div>
+        <div class="product-body">
+          <h3>Cheesesteak Clásico</h3>
+          <p class="product-desc">Carne de res premium, salteada al momento con cebolla y pimiento, bañada en nuestra salsa de queso artesanal y servida con pan artesanal.</p>
+
+          <div class="extras-box">
+            <p class="extras-title">Extras</p>
+            <label class="extra-row">
+              <span><input type="checkbox" data-product="clasico" data-extra="queso" data-price="25"> Extra queso</span>
+              <span class="extra-price">+$25</span>
+            </label>
+            <label class="extra-row">
+              <span><input type="checkbox" data-product="clasico" data-extra="carne" data-price="35"> Extra carne</span>
+              <span class="extra-price">+$35</span>
+            </label>
+            <label class="extra-row">
+              <span><input type="checkbox" data-product="clasico" data-extra="papas" data-price="30"> Extra papas</span>
+              <span class="extra-price">+$30</span>
+            </label>
+          </div>
+
+          <div class="product-footer">
+            <span class="price" id="price-clasico">$179 MXN</span>
+            <button class="btn btn-gold btn-add" data-product-id="clasico" data-product-name="Cheesesteak Clásico" data-base-price="179">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Producto 2: Combo -->
+      <article class="product-card featured" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.15">
+        <span class="badge-featured">Más pedido</span>
+        <div class="product-img-placeholder">
+          <i class="fa-solid fa-utensils"></i>
+          <p><span>/assets/img/combo.jpg</span></p>
+        </div>
+        <div class="product-body">
+          <h3>Combo Cheesesteak</h3>
+          <p class="product-desc">Incluye Cheesesteak Clásico + papas a la francesa + una bebida de 477 ml a elegir.</p>
+          <ul class="combo-includes">
+            <li><i class="fa-solid fa-check"></i> Cheesesteak Clásico</li>
+            <li><i class="fa-solid fa-check"></i> Papas a la francesa</li>
+            <li><i class="fa-solid fa-check"></i> Bebida 477 ml a elegir</li>
+          </ul>
+
+          <div class="extras-box">
+            <p class="extras-title">Extras</p>
+            <label class="extra-row">
+              <span><input type="checkbox" data-product="combo" data-extra="queso" data-price="25"> Extra queso</span>
+              <span class="extra-price">+$25</span>
+            </label>
+            <label class="extra-row">
+              <span><input type="checkbox" data-product="combo" data-extra="carne" data-price="35"> Extra carne</span>
+              <span class="extra-price">+$35</span>
+            </label>
+            <label class="extra-row">
+              <span><input type="checkbox" data-product="combo" data-extra="papas" data-price="30"> Extra papas</span>
+              <span class="extra-price">+$30</span>
+            </label>
+          </div>
+
+          <div class="product-footer">
+            <span class="price" id="price-combo">$239 MXN</span>
+            <button class="btn btn-gold btn-add" data-product-id="combo" data-product-name="Combo Cheesesteak" data-base-price="239" data-needs-drink="true">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="grate-divider" aria-hidden="true"></div>
+
+<!-- ================= HECHO AL MOMENTO ================= -->
+<section class="section hecho-momento" id="hecho-al-momento">
+  <div class="wrap hecho-grid">
+    <div data-aos="fade-right">
+      <p class="eyebrow">Sin atajos</p>
+      <h2 class="section-title">Hecho al momento</h2>
+      <p class="lead-text">Cada pedido se prepara exclusivamente cuando realizas tu orden.</p>
+      <ul class="checklist">
+        <li><i class="fa-solid fa-xmark"></i> Nada permanece almacenado.</li>
+        <li><i class="fa-solid fa-xmark"></i> Nada se recalienta.</li>
+        <li><i class="fa-solid fa-check"></i> Todo se cocina especialmente para ti.</li>
+      </ul>
+    </div>
+    <div class="img-placeholder" data-aos="fade-left" data-tilt data-tilt-max="8">
+      <i class="fa-solid fa-fire"></i>
+      <p>Foto: plancha en vivo<br><span>/assets/img/hecho-al-momento.jpg</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FRASE DESTACADA ================= -->
+<section class="frase-destacada">
+  <div class="frase-grate" aria-hidden="true"></div>
+  <h2 data-aos="zoom-in">
+    <span>PREPARADO AL MOMENTO.</span>
+    <span>HECHO CON PASIÓN.</span>
+    <span>PENSADO PARA TI.</span>
+  </h2>
+</section>
+
+<!-- ================= BENEFICIOS ================= -->
+<section class="section beneficios">
+  <div class="wrap">
+    <div class="section-head" data-aos="fade-up">
+      <p class="eyebrow">Por qué Steak House</p>
+      <h2 class="section-title">Calidad en cada detalle</h2>
+    </div>
+    <div class="beneficios-grid">
+      <div class="beneficio-card" data-aos="fade-up">
+        <i class="fa-solid fa-cow"></i>
+        <h3>Carne Premium</h3>
+      </div>
+      <div class="beneficio-card" data-aos="fade-up" data-aos-delay="50">
+        <i class="fa-solid fa-bread-slice"></i>
+        <h3>Pan Artesanal</h3>
+      </div>
+      <div class="beneficio-card" data-aos="fade-up" data-aos-delay="100">
+        <i class="fa-solid fa-fire-flame-curved"></i>
+        <h3>Preparado al Momento</h3>
+      </div>
+      <div class="beneficio-card" data-aos="fade-up" data-aos-delay="150">
+        <i class="fa-solid fa-leaf"></i>
+        <h3>Ingredientes Frescos</h3>
+      </div>
+      <div class="beneficio-card" data-aos="fade-up" data-aos-delay="200">
+        <i class="fa-solid fa-cheese"></i>
+        <h3>Salsa de Queso Artesanal</h3>
+      </div>
+      <div class="beneficio-card" data-aos="fade-up" data-aos-delay="250">
+        <i class="fa-solid fa-bolt"></i>
+        <h3>Pedidos Rápidos</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="grate-divider" aria-hidden="true"></div>
+
+<!-- ================= GALERIA ================= -->
+<section class="section galeria" id="galeria">
+  <div class="wrap">
+    <div class="section-head" data-aos="fade-up">
+      <p class="eyebrow">Galería</p>
+      <h2 class="section-title">Cada capa, a la vista</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" data-aos="fade-up" data-tilt data-tilt-max="10"><i class="fa-solid fa-burger"></i><span>Cheesesteak</span></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="50" data-tilt data-tilt-max="10"><i class="fa-solid fa-drumstick-bite"></i><span>Carne</span></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="10"><i class="fa-solid fa-fries"></i><span>Papas</span></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="150" data-tilt data-tilt-max="10"><i class="fa-solid fa-cheese"></i><span>Queso</span></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="10"><i class="fa-solid fa-carrot"></i><span>Ingredientes</span></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="250" data-tilt data-tilt-max="10"><i class="fa-solid fa-fire-flame-curved"></i><span>Preparación</span></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="10"><i class="fa-solid fa-kitchen-set"></i><span>Cocina</span></div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="350" data-tilt data-tilt-max="10"><i class="fa-solid fa-plate-wheat"></i><span>Producto Terminado</span></div>
+    </div>
+    <p class="gallery-note">* Reemplazar cada tarjeta con fotografías reales en <code>/assets/img/galeria-*.jpg</code></p>
+  </div>
+</section>
+
+<!-- ================= UBICACION ================= -->
+<section class="section ubicacion" id="ubicacion">
+  <div class="wrap ubicacion-grid">
+    <div data-aos="fade-right">
+      <p class="eyebrow">Visítanos</p>
+      <h2 class="section-title">Encuéntranos</h2>
+      <address>
+        Calle Morelos s/n, Colonia Centro<br>
+        San Blas Atempa, Oaxaca<br>
+        C.P. 70786
+      </address>
+      <a class="btn btn-gold" target="_blank" rel="noopener"
+         href="https://www.google.com/maps/dir/?api=1&destination=San+Blas+Atempa+Oaxaca+Calle+Morelos">
+        <i class="fa-solid fa-location-arrow"></i> Cómo llegar
+      </a>
+    </div>
+    <div class="map-frame" data-aos="fade-left">
+      <iframe
+        title="Ubicación Steak House"
+        src="https://www.google.com/maps?q=San+Blas+Atempa,+Oaxaca,+Calle+Morelos&output=embed"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="sh-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="sh-logo footer-logo">STEAK <span>HOUSE</span></p>
+      <p>San Blas Atempa, Oaxaca</p>
+      <p>Pedidos vía WhatsApp</p>
+    </div>
+    <div>
+      <h4>Horario</h4>
+      <p>Lun – Dom: 5:00 pm – 11:00 pm</p>
+    </div>
+    <div>
+      <h4>Ubicación</h4>
+      <p>Calle Morelos s/n, Centro<br>San Blas Atempa, Oaxaca, C.P. 70786</p>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <a href="https://wa.me/529711362099" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> 971 136 2099</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Steak House. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+<a href="https://wa.me/529711362099?text=Hola%20Steak%20House%2C%20quiero%20realizar%20el%20siguiente%20pedido." target="_blank" rel="noopener" class="wa-float" aria-label="Ordena ahora por WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+  <span>Ordena ahora</span>
+</a>
+
+<!-- ================= DRINK MODAL ================= -->
+<div class="modal-overlay" id="drinkModal">
+  <div class="modal-box">
+    <h3>Elige tu bebida (477 ml)</h3>
+    <p class="modal-sub">Incluida en tu Combo Cheesesteak</p>
+    <div class="drink-options" id="drinkOptions">
+      <label class="drink-option">
+        <input type="radio" name="drinkChoice" value="Coca-Cola">
+        <span><i class="fa-solid fa-bottle-droplet"></i> Coca-Cola</span>
+      </label>
+      <label class="drink-option">
+        <input type="radio" name="drinkChoice" value="Limonada Mineral">
+        <span><i class="fa-solid fa-glass-water"></i> Limonada Mineral</span>
+      </label>
+      <label class="drink-option">
+        <input type="radio" name="drinkChoice" value="Naranjada Mineral">
+        <span><i class="fa-solid fa-lemon"></i> Naranjada Mineral</span>
+      </label>
+    </div>
+    <p class="drink-error" id="drinkError">Selecciona una bebida para continuar.</p>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" id="drinkCancel">Cancelar</button>
+      <button class="btn btn-gold" id="drinkConfirm">Agregar al carrito</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= CART DRAWER ================= -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras">
+  <div class="cart-header">
+    <h3><i class="fa-solid fa-bag-shopping"></i> Tu pedido</h3>
+    <button class="cart-close" id="closeCartBtn" aria-label="Cerrar carrito">&times;</button>
+  </div>
+
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty" id="cartEmptyMsg">Tu carrito está vacío. ¡Agrega tu primer Cheesesteak!</p>
+  </div>
+
+  <div class="cart-footer">
+    <div class="cart-fields">
+      <input type="text" id="clientName" placeholder="Tu nombre" />
+      <textarea id="observations" placeholder="Observaciones (opcional)" rows="2"></textarea>
+    </div>
+    <div class="cart-totals">
+      <div class="cart-row"><span>Subtotal</span><span id="cartSubtotal">$0 MXN</span></div>
+      <div class="cart-row total"><span>Total</span><span id="cartTotal">$0 MXN</span></div>
+    </div>
+    <div class="cart-actions">
+      <button class="btn btn-ghost small" id="clearCartBtn">Vaciar carrito</button>
+      <button class="btn btn-gold" id="confirmOrderBtn"><i class="fa-brands fa-whatsapp"></i> Confirmar pedido</button>
+    </div>
+  </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  /* ============ CONFIG ============ */
+  const WHATSAPP_NUMBER = "529711362099"; // 52 + 10 digit MX number
+  const STORAGE_KEY = "steakhouse_cart_v1";
+  const EXTRA_LABELS = { queso: "Extra queso", carne: "Extra carne", papas: "Extra papas" };
+
+  /* ============ STATE ============ */
+  let cart = loadCart();
+  let pendingCombo = null; // holds combo add-to-cart request while drink modal is open
+
+  function loadCart() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      return raw ? JSON.parse(raw) : [];
+    } catch (e) {
+      console.error("No se pudo leer el carrito guardado:", e);
+      return [];
+    }
+  }
+
+  function saveCart() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
+    } catch (e) {
+      console.error("No se pudo guardar el carrito:", e);
+    }
+  }
+
+  /* ============ DOM REFS ============ */
+  const cartItemsEl = document.getElementById("cartItems");
+  const cartEmptyMsg = document.getElementById("cartEmptyMsg");
+  const cartCountEl = document.getElementById("cartCount");
+  const cartSubtotalEl = document.getElementById("cartSubtotal");
+  const cartTotalEl = document.getElementById("cartTotal");
+  const cartDrawer = document.getElementById("cartDrawer");
+  const cartOverlay = document.getElementById("cartOverlay");
+  const drinkModal = document.getElementById("drinkModal");
+  const drinkError = document.getElementById("drinkError");
+  const toastEl = document.getElementById("toast");
+  const clientNameInput = document.getElementById("clientName");
+  const observationsInput = document.getElementById("observations");
+
+  /* ============ HELPERS ============ */
+  function money(n) {
+    return "$" + n.toFixed(0) + " MXN";
+  }
+
+  function showToast(msg) {
+    toastEl.textContent = msg;
+    toastEl.classList.add("show");
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(() => toastEl.classList.remove("show"), 2200);
+  }
+
+  function getSelectedExtras(productId) {
+    const boxes = document.querySelectorAll(
+      `input[type="checkbox"][data-product="${productId}"]:checked`
+    );
+    return Array.from(boxes).map((b) => ({
+      key: b.dataset.extra,
+      label: EXTRA_LABELS[b.dataset.extra] || b.dataset.extra,
+      price: Number(b.dataset.price),
+    }));
+  }
+
+  function clearExtrasUI(productId) {
+    document
+      .querySelectorAll(`input[type="checkbox"][data-product="${productId}"]`)
+      .forEach((b) => (b.checked = false));
+    updateLivePrice(productId);
+  }
+
+  function updateLivePrice(productId) {
+    const priceEl = document.getElementById(`price-${productId}`);
+    const btn = document.querySelector(`.btn-add[data-product-id="${productId}"]`);
+    if (!priceEl || !btn) return;
+    const base = Number(btn.dataset.basePrice);
+    const extras = getSelectedExtras(productId);
+    const extraTotal = extras.reduce((s, e) => s + e.price, 0);
+    priceEl.textContent = money(base + extraTotal);
+  }
+
+  // live price update as extras are toggled
+  document.querySelectorAll('input[type="checkbox"][data-product]').forEach((box) => {
+    box.addEventListener("change", () => updateLivePrice(box.dataset.product));
+  });
+
+  /* ============ CART RENDER ============ */
+  function renderCart() {
+    cartItemsEl.querySelectorAll(".cart-item").forEach((el) => el.remove());
+
+    if (cart.length === 0) {
+      cartEmptyMsg.style.display = "block";
+    } else {
+      cartEmptyMsg.style.display = "none";
+      cart.forEach((item, index) => {
+        const el = document.createElement("div");
+        el.className = "cart-item";
+        const extrasText = item.extras.length
+          ? item.extras.map((e) => e.label).join(", ")
+          : "Sin extras";
+        const drinkText = item.drink ? ` · Bebida: ${item.drink}` : "";
+        el.innerHTML = `
+          <div class="cart-item-top">
+            <div>
+              <div class="cart-item-name">${item.name}</div>
+              <div class="cart-item-extras">${extrasText}${drinkText}</div>
+            </div>
+            <button class="cart-item-remove" aria-label="Eliminar" data-index="${index}"><i class="fa-solid fa-trash"></i></button>
+          </div>
+          <div class="cart-item-bottom">
+            <div class="qty-control">
+              <button class="qty-btn" data-action="dec" data-index="${index}">−</button>
+              <span>${item.qty}</span>
+              <button class="qty-btn" data-action="inc" data-index="${index}">+</button>
+            </div>
+            <div class="cart-item-price">${money(item.unitPrice * item.qty)}</div>
+          </div>
+        `;
+        cartItemsEl.appendChild(el);
+      });
+    }
+
+    const subtotal = cart.reduce((s, i) => s + i.unitPrice * i.qty, 0);
+    cartSubtotalEl.textContent = money(subtotal);
+    cartTotalEl.textContent = money(subtotal);
+    const totalQty = cart.reduce((s, i) => s + i.qty, 0);
+    cartCountEl.textContent = totalQty;
+
+    saveCart();
+  }
+
+  cartItemsEl.addEventListener("click", (e) => {
+    const removeBtn = e.target.closest(".cart-item-remove");
+    const qtyBtn = e.target.closest(".qty-btn");
+    if (removeBtn) {
+      const idx = Number(removeBtn.dataset.index);
+      cart.splice(idx, 1);
+      renderCart();
+      return;
+    }
+    if (qtyBtn) {
+      const idx = Number(qtyBtn.dataset.index);
+      if (qtyBtn.dataset.action === "inc") cart[idx].qty += 1;
+      if (qtyBtn.dataset.action === "dec") {
+        cart[idx].qty -= 1;
+        if (cart[idx].qty <= 0) cart.splice(idx, 1);
+      }
+      renderCart();
+    }
+  });
+
+  document.getElementById("clearCartBtn").addEventListener("click", () => {
+    if (cart.length === 0) return;
+    cart = [];
+    renderCart();
+    showToast("Carrito vaciado");
+  });
+
+  /* ============ ADD TO CART ============ */
+  function addItemToCart({ id, name, basePrice, extras, drink }) {
+    const extraTotal = extras.reduce((s, e) => s + e.price, 0);
+    const unitPrice = basePrice + extraTotal;
+
+    // group identical configurations together
+    const signature = JSON.stringify({ id, extras: extras.map((e) => e.key).sort(), drink });
+    const existing = cart.find((i) => i.signature === signature);
+    if (existing) {
+      existing.qty += 1;
+    } else {
+      cart.push({ id, name, basePrice, extras, drink, unitPrice, qty: 1, signature });
+    }
+    renderCart();
+    openCart();
+    showToast(`${name} agregado al carrito`);
+  }
+
+  document.querySelectorAll(".btn-add").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.dataset.productId;
+      const name = btn.dataset.productName;
+      const basePrice = Number(btn.dataset.basePrice);
+      const needsDrink = btn.dataset.needsDrink === "true";
+      const extras = getSelectedExtras(id);
+
+      if (needsDrink) {
+        pendingCombo = { id, name, basePrice, extras };
+        openDrinkModal();
+      } else {
+        addItemToCart({ id, name, basePrice, extras, drink: null });
+        clearExtrasUI(id);
+      }
+    });
+  });
+
+  /* ============ DRINK MODAL ============ */
+  function openDrinkModal() {
+    drinkModal.classList.add("active");
+    drinkError.classList.remove("show");
+    document.querySelectorAll('input[name="drinkChoice"]').forEach((r) => (r.checked = false));
+  }
+  function closeDrinkModal() {
+    drinkModal.classList.remove("active");
+    pendingCombo = null;
+  }
+  document.getElementById("drinkCancel").addEventListener("click", closeDrinkModal);
+  drinkModal.addEventListener("click", (e) => {
+    if (e.target === drinkModal) closeDrinkModal();
+  });
+  document.getElementById("drinkConfirm").addEventListener("click", () => {
+    const chosen = document.querySelector('input[name="drinkChoice"]:checked');
+    if (!chosen) {
+      drinkError.classList.add("show");
+      return;
+    }
+    if (pendingCombo) {
+      addItemToCart({ ...pendingCombo, drink: chosen.value });
+      clearExtrasUI(pendingCombo.id);
+    }
+    closeDrinkModal();
+  });
+
+  /* ============ CART DRAWER TOGGLE ============ */
+  function openCart() {
+    cartDrawer.classList.add("active");
+    cartOverlay.classList.add("active");
+  }
+  function closeCart() {
+    cartDrawer.classList.remove("active");
+    cartOverlay.classList.remove("active");
+  }
+  document.getElementById("openCartBtn").addEventListener("click", openCart);
+  document.getElementById("closeCartBtn").addEventListener("click", closeCart);
+  cartOverlay.addEventListener("click", closeCart);
+
+  /* ============ CHECKOUT -> WHATSAPP ============ */
+  document.getElementById("confirmOrderBtn").addEventListener("click", () => {
+    if (cart.length === 0) {
+      showToast("Tu carrito está vacío");
+      return;
+    }
+    const name = clientNameInput.value.trim();
+    if (!name) {
+      clientNameInput.focus();
+      showToast("Escribe tu nombre para continuar");
+      return;
+    }
+    const observations = observationsInput.value.trim();
+    const subtotal = cart.reduce((s, i) => s + i.unitPrice * i.qty, 0);
+
+    let lines = [];
+    lines.push("STEAK HOUSE");
+    lines.push("Nuevo Pedido");
+    lines.push("");
+    cart.forEach((item) => {
+      lines.push(`• ${item.name} x${item.qty} — ${money(item.unitPrice * item.qty)}`);
+      if (item.extras.length) {
+        lines.push(`   Extras: ${item.extras.map((e) => e.label).join(", ")}`);
+      }
+      if (item.drink) {
+        lines.push(`   Bebida: ${item.drink}`);
+      }
+    });
+    lines.push("");
+    lines.push(`Subtotal: ${money(subtotal)}`);
+    lines.push(`Total: ${money(subtotal)}`);
+    lines.push("");
+    lines.push(`Nombre del cliente: ${name}`);
+    lines.push(`Observaciones: ${observations || "Ninguna"}`);
+    lines.push("");
+    lines.push("Hola Steak House, quiero realizar el siguiente pedido.");
+
+    const message = encodeURIComponent(lines.join("\n"));
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+    window.open(url, "_blank", "noopener");
+  });
+
+  /* ============ NAV: burger + scroll style ============ */
+  const burger = document.getElementById("burger");
+  const navLinks = document.getElementById("navLinks");
+  burger.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
+    burger.setAttribute("aria-expanded", String(isOpen));
+  });
+  navLinks.querySelectorAll("a").forEach((a) =>
+    a.addEventListener("click", () => navLinks.classList.remove("open"))
+  );
+
+  window.addEventListener("scroll", () => {
+    const nav = document.getElementById("shNav");
+    if (window.scrollY > 40) {
+      nav.style.background = "rgba(15,15,15,0.85)";
+    } else {
+      nav.style.background = "rgba(15,15,15,0.55)";
+    }
+  });
+
+  /* ============ EMBERS (sparks) ============ */
+  const embersContainer = document.getElementById("embers");
+  const EMBER_COUNT = 26;
+  for (let i = 0; i < EMBER_COUNT; i++) {
+    const s = document.createElement("span");
+    const left = Math.random() * 100;
+    const duration = 7 + Math.random() * 8;
+    const delay = Math.random() * 12;
+    s.style.left = left + "vw";
+    s.style.animationDuration = duration + "s";
+    s.style.animationDelay = delay + "s";
+    embersContainer.appendChild(s);
+  }
+
+  /* ============ INIT LIBS ============ */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.AOS) AOS.init({ duration: 800, once: true, offset: 60 });
+    if (window.VanillaTilt) {
+      VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+        max: 8,
+        speed: 500,
+        glare: true,
+        "max-glare": 0.2,
+      });
+    }
+    if (window.gsap) {
+      gsap.from(".hero-title", { y: 30, opacity: 0, duration: 1, ease: "power3.out", delay: 0.1 });
+    }
+    document.getElementById("year").textContent = new Date().getFullYear();
+    renderCart();
+  });
+})();
+
+</script>
+</body>
+</html>
