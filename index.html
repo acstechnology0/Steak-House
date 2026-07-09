@@ -46,7 +46,9 @@
 }
 </script>
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥩</text></svg>" />
+<link rel="icon" type="image/jpeg" href="imagenes/logo-steak-house.jpeg">
+<link rel="shortcut icon" href="imagenes/logo-steak-house.jpeg">
+<link rel="apple-touch-icon" href="imagenes/logo-steak-house.jpeg">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -776,9 +778,178 @@ address{
   .frase-destacada h2{ font-size:2rem; }
 }
 
+/* ============ LOCAL CHATBOT ============ */
+.chat-toggle-btn {
+  position: fixed; right: 24px; bottom: 24px; z-index: 90;
+  background: var(--gold); color: #1a1305;
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 20px; border-radius: 999px;
+  font-weight: 800; font-size: .9rem; border: none; cursor: pointer;
+  box-shadow: var(--shadow-gold);
+  transition: transform .25s ease;
+}
+.chat-toggle-btn:hover { transform: translateY(-3px) scale(1.03); }
+.chat-toggle-btn i { font-size: 1.2rem; }
+
+.chat-container {
+  position: fixed; right: 24px; bottom: 90px; width: min(380px, 92vw); height: min(500px, 70vh);
+  background: var(--panel-2); border: 1px solid rgba(200,155,60,0.25);
+  border-radius: var(--radius); z-index: 95; display: flex; flex-direction: column;
+  box-shadow: var(--shadow-soft); opacity: 0; pointer-events: none; transform: translateY(20px);
+  transition: opacity .3s ease, transform .3s ease;
+  overflow: hidden;
+}
+.chat-container.active { opacity: 1; pointer-events: auto; transform: translateY(0); }
+
+.chat-header {
+  background: var(--panel); padding: 16px 20px; border-bottom: 1px solid rgba(200,155,60,0.15);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.chat-bot-info { display: flex; align-items: center; gap: 12px; }
+.chat-bot-info i { font-size: 1.5rem; color: var(--gold); }
+.chat-bot-info h4 { margin: 0; font-size: .95rem; font-weight: 700; letter-spacing: .02em; }
+.chat-bot-info span { font-size: .75rem; color: #25D366; display: block; margin-top: 2px; }
+.chat-close-btn { background: none; border: none; color: var(--gray); font-size: 1.6rem; cursor: pointer; line-height: 1; }
+.chat-close-btn:hover { color: var(--white); }
+
+.chat-messages { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.chat-msg { max-width: 85%; padding: 10px 14px; border-radius: 12px; font-size: .88rem; line-height: 1.4; word-break: break-word; }
+.chat-msg.bot { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); align-self: flex-start; color: var(--white); border-top-left-radius: 2px; }
+.chat-msg.user { background: var(--gold); color: #1a1305; align-self: flex-end; font-weight: 500; border-top-right-radius: 2px; }
+
+.chat-options { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.chat-opt-btn { background: rgba(200,155,60,0.12); border: 1px solid rgba(200,155,60,0.3); color: var(--gold-light); font-size: .78rem; font-weight: 600; padding: 6px 12px; border-radius: 999px; cursor: pointer; transition: background .2s, border-color .2s; }
+.chat-opt-btn:hover { background: rgba(200,155,60,0.25); border-color: var(--gold); }
+
+.chat-input-area { padding: 12px 16px; background: var(--panel); border-top: 1px solid rgba(255,255,255,0.06); display: flex; gap: 10px; }
+.chat-input-area input { flex: 1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--white); padding: 8px 12px; font-size: .88rem; font-family: var(--font-body); }
+.chat-input-area input:focus { border-color: var(--gold); outline: none; }
+.chat-input-area button { background: var(--gold); border: none; color: #1a1305; width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background .2s; }
+.chat-input-area button:hover { background: var(--gold-light); }
+
+.chat-bot-logo {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--gold);
+}
+
+/* ============ PRELOADER ============ */
+#preloader{
+  position:fixed;
+  inset:0;
+  background:#0F0F0F;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:999999;
+  transition:opacity .7s ease, visibility .7s ease;
+}
+
+#preloader.hide{
+  opacity:0;
+  visibility:hidden;
+}
+
+.loader-content{
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.loader-content img{
+  width:135px;
+  height:135px;
+  object-fit:cover;
+  border-radius:50%;
+  margin-bottom:24px;
+  box-shadow:0 0 30px rgba(200,155,60,.35);
+  animation:steakLogoFloat 2.3s ease-in-out infinite;
+}
+
+.loader-content h1{
+  margin:0;
+  font-family:var(--font-display);
+  font-size:54px;
+  letter-spacing:.04em;
+  color:#fff;
+}
+
+.loader-content p{
+  margin-top:4px;
+  color:var(--gold-light);
+  font-size:.82rem;
+  font-weight:800;
+  letter-spacing:4px;
+}
+
+.loader-dots{
+  display:flex;
+  gap:10px;
+  margin-top:26px;
+}
+
+.loader-dots span{
+  width:11px;
+  height:11px;
+  border-radius:50%;
+  background:var(--gold);
+  animation:steakDot .9s infinite ease-in-out;
+}
+
+.loader-dots span:nth-child(2){
+  animation-delay:.15s;
+}
+
+.loader-dots span:nth-child(3){
+  animation-delay:.3s;
+}
+
+@keyframes steakDot{
+  0%,80%,100%{
+    transform:scale(.45);
+    opacity:.35;
+  }
+
+  40%{
+    transform:scale(1);
+    opacity:1;
+  }
+}
+
+@keyframes steakLogoFloat{
+  0%,100%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-8px);
+  }
+}
+
 </style>
 </head>
 <body>
+
+  <!-- PRELOADER -->
+<div id="preloader">
+  <div class="loader-content">
+    <img src="imagenes/logo-steak-house.jpeg" alt="Steak House">
+
+    <h1>Steak House</h1>
+
+    <p>CHEESESTEAK • PREMIUM • AL MOMENTO</p>
+
+    <div class="loader-dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>
 
 <!-- ================= AMBIENT BACKGROUND ================= -->
 <div class="ambient" aria-hidden="true">
@@ -1088,11 +1259,33 @@ address{
   </div>
 </footer>
 
-<!-- ================= FLOATING WHATSAPP ================= -->
-<a href="https://wa.me/529711362099?text=Hola%20Steak%20House%2C%20quiero%20realizar%20el%20siguiente%20pedido." target="_blank" rel="noopener" class="wa-float" aria-label="Ordena ahora por WhatsApp">
-  <i class="fa-brands fa-whatsapp"></i>
-  <span>Ordena ahora</span>
-</a>
+<!-- ================= FLOATING CHATBOT ================= -->
+<button class="chat-toggle-btn" id="chatToggleBtn" aria-label="Abrir asistente de chat">
+  <i class="fa-solid fa-comments"></i>
+  <span>¿Dudas? Chatea con nosotros</span>
+</button>
+
+<!-- ================= INTERFAZ DEL CHATBOT ================= -->
+<div class="chat-container" id="chatContainer">
+  <div class="chat-header">
+  <div class="chat-bot-info">
+    <!-- Reemplazado por tu logo oficial -->
+    <img src="imagenes/logo-steak-house.jpeg" alt="Logo Steak House" class="chat-bot-logo">
+    <div>
+      <h4>Asistente Steak House</h4>
+      <span>En línea</span>
+    </div>
+  </div>
+  <button class="chat-close-btn" id="chatCloseBtn" aria-label="Cerrar chat">&times;</button>
+</div>
+  <div class="chat-messages" id="chatMessages">
+    <!-- Los mensajes y opciones se generarán dinámicamente aquí -->
+  </div>
+  <div class="chat-input-area">
+    <input type="text" id="chatInput" placeholder="Escribe tu duda aquí..." autocomplete="off">
+    <button id="chatSendBtn" aria-label="Enviar mensaje"><i class="fa-solid fa-paper-plane"></i></button>
+  </div>
+</div>
 
 <!-- ================= DRINK MODAL ================= -->
 <div class="modal-overlay" id="drinkModal">
@@ -1487,6 +1680,201 @@ address{
     renderCart();
   });
 })();
+
+
+
+</script>
+
+<!-- Script del Chatbot Local -->
+<script>
+(function() {
+  "use strict";
+
+  // Respuestas del bot mapeadas por palabras clave
+  const KNOWLEDGE_BASE = {
+    horario: "🕒 **Nuestros Horarios:**\n• Lun – Vie: 9:00 am – 4:00 pm\n• Sab – Dom: 9:00 am – 2:00 pm.",
+    ubicacion: "📍 Nos encontramos en **Calle Morelos s/n, Colonia Centro, San Blas Atempa, Oaxaca**. Puedes pulsar el botón 'Cómo llegar' en la sección de ubicación para abrir Google Maps.",
+    menu: "🥩 **Especialidades:**\n• *Cheesesteak Clásico*: $179 MXN\n• *Combo Cheesesteak* (con papas y bebida): $239 MXN.\n\nPuedes agregar productos directamente al carrito arriba para armar tu orden.",
+    pedido: "🛒 Para ordenar, agrega tus Cheesesteaks favoritos al carrito de compras desde el menú, ingresa tu nombre y confírmalo para enviárnoslo listo por WhatsApp.",
+    contacto: "📞 Puedes comunicarte con nosotros directamente al número de teléfono **971 136 2099** si tienes un requerimiento especial."
+  };
+
+  const toggleBtn = document.getElementById("chatToggleBtn");
+  const container = document.getElementById("chatContainer");
+  const closeBtn = document.getElementById("chatCloseBtn");
+  const messagesEl = document.getElementById("chatMessages");
+  const inputEl = document.getElementById("chatInput");
+  const sendBtn = document.getElementById("chatSendBtn");
+
+  let isFirstOpen = true;
+
+  // Alternar ventana del chat
+  toggleBtn.addEventListener("click", () => {
+    container.classList.toggle("active");
+    if(container.classList.contains("active") && isFirstOpen) {
+      triggerWelcome();
+      isFirstOpen = false;
+    }
+  });
+
+  closeBtn.addEventListener("click", () => container.classList.remove("active"));
+
+  // Enviar mensaje de texto
+  function handleUserSend() {
+    const text = inputEl.value.trim();
+    if(!text) return;
+    
+    appendMessage(text, "user");
+    inputEl.value = "";
+    
+    setTimeout(() => processResponse(text), 600);
+  }
+
+  sendBtn.addEventListener("click", handleUserSend);
+  inputEl.addEventListener("keypress", (e) => { if(e.key === "Enter") handleUserSend(); });
+
+  // Renderizar burbujas de texto
+  function appendMessage(text, sender) {
+    const msg = document.createElement("div");
+    msg.className = `chat-msg ${sender}`;
+    // Reemplazo simple para simular saltos de línea y negritas en el renderizado local
+    msg.innerHTML = text.replace(/\n/g, "<br>").replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>").replace(/\*(.*?)\*/g, "<em>$1</em>");
+    messagesEl.appendChild(msg);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+    return msg;
+  }
+
+  // Mensaje inicial con opciones rápidas (Pills)
+  function triggerWelcome() {
+    appendMessage("¡Hola! 👋 Bienvenido a **Steak House**. ¿En qué puedo ayudarte el día de hoy?", "bot");
+    
+    const optionsContainer = document.createElement("div");
+    optionsContainer.className = "chat-options";
+    
+    const options = [
+      { text: "🕒 Ver Horarios", key: "horario" },
+      { text: "📍 Ubicación", key: "ubicacion" },
+      { text: "🥩 Menú y Precios", key: "menu" },
+      { text: "🛒 ¿Cómo ordenar?", key: "pedido" }
+    ];
+
+    options.forEach(opt => {
+      const btn = document.createElement("button");
+      btn.className = "chat-opt-btn";
+      btn.textContent = opt.text;
+      btn.addEventListener("click", () => {
+        appendMessage(opt.text, "user");
+        setTimeout(() => appendMessage(KNOWLEDGE_BASE[opt.key], "bot"), 400);
+      });
+      optionsContainer.appendChild(btn);
+    });
+
+    messagesEl.appendChild(optionsContainer);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  // Procesador de respuestas local bilingüe (Español / Inglés)
+  function processResponse(rawText) {
+    // 1. Limpieza total: minúsculas, elimina acentos, diéresis y espacios extras
+    const cleanText = rawText
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .trim();
+    
+    // Helper para buscar palabras clave o frases completas
+    const matches = (keywords) => keywords.some(keyword => cleanText.includes(keyword));
+
+    // Detectar si el usuario está hablando en inglés para responderle en su idioma
+    const isEnglish = matches(["hours", "schedule", "open", "close", "where", "location", "address", "maps", "price", "cost", "how much", "order", "buy", "cart", "phone", "call", "whatsapp", "thank", "hello", "hi", "hey", "delivery", "payment", "pay", "cash", "fresh", "steak"]);
+
+    // 2. Diccionario masivo de intenciones (Bilingüe)
+    if (matches(["horario", "abren", "cierran", "hora", "tiempo", "servicio", "dias", "fin de semana", "sabado", "domingo", "abierto", "cerrado", "tarde", "temprano", "atendiendo", "atienden", "hours", "schedule", "time", "weekend"])) {
+      if (isEnglish) {
+        appendMessage("🕒 **Our Schedule:**\n• Mon – Fri: 9:00 am – 4:00 pm\n• Sat – Sun: 9:00 am – 2:00 pm.", "bot");
+      } else {
+        appendMessage(KNOWLEDGE_BASE.horario, "bot");
+      }
+      
+    } else if (matches(["ubicacion", "donde", "direccion", "mapa", "lugar", "local", "sitio", "encuentran", "estan", "san blas", "atempa", "como llegar", "calle", "referencia", "sucursal", "where", "location", "address", "maps", "find", "place", "here", "located"])) {
+      if (isEnglish) {
+        appendMessage("📍 We are located at **Calle Morelos s/n, Colonia Centro, San Blas Atempa, Oaxaca**. You can click the 'Cómo llegar' button in the location section above to open Google Maps.", "bot");
+      } else {
+        appendMessage(KNOWLEDGE_BASE.ubicacion, "bot");
+      }
+      
+    } else if (matches(["menu", "precio", "costo", "venden", "carta", "platillos", "queso", "carne", "combos", "clasico", "papas", "bebida", "cuanto cuesta", "cheesesteak", "sandwich", "lonche", "tienen", "antojo", "hambre", "comer", "cenar", "comida", "price", "cost", "how much", "food", "sell", "cheese", "meat", "fries", "drink", "soda", "coke"])) {
+      if (isEnglish) {
+        appendMessage("🥩 **Our Specialities:**\n• *Cheesesteak Clásico*: $179 MXN\n• *Combo Cheesesteak* (with fries and drink): $239 MXN.\n\nYou can add products directly to the shopping cart above to build your order.", "bot");
+      } else {
+        appendMessage(KNOWLEDGE_BASE.menu, "bot");
+      }
+      
+    } else if (matches(["ordenar", "pedir", "pedido", "carrito", "comprar", "encargar", "orden", "llevar", "pido", "comprarlo", "hacer el pedido", "mandar", "enviar", "quiero uno", "agregar", "order", "buy", "cart", "purchase", "add"])) {
+      if (isEnglish) {
+        appendMessage("🛒 To order, add your favorite Cheesesteaks to the shopping cart from the menu section, type your name, and confirm it to send it directly to us via WhatsApp.", "bot");
+      } else {
+        appendMessage(KNOWLEDGE_BASE.pedido, "bot");
+      }
+      
+    } else if (matches(["contacto", "telefono", "llamar", "whatsapp", "wa", "celular", "numero", "hablar", "fb", "facebook", "message", "phone", "call", "number", "contact"])) {
+      if (isEnglish) {
+        appendMessage("📞 You can contact us directly at our phone number **971 136 2099** for any special requests.", "bot");
+      } else {
+        appendMessage(KNOWLEDGE_BASE.contacto, "bot");
+      }
+      
+    } else if (matches(["gracias", "ty", "thanks", "excelente", "perfecto", "chido", "va", "ok", "entendido", "buenisimo", "orale", "super", "genial", "cool", "thank you", "thx", "awesome", "perfect", "got it"])) {
+      if (isEnglish) {
+        appendMessage("You're welcome! 😎 If you need anything else about your favorite Cheesesteaks, I'm here to help.", "bot");
+      } else {
+        appendMessage("¡De nada! 😎 Si necesitas saber algo más sobre tus Cheesesteaks favoritos, aquí sigo al pendiente.", "bot");
+      }
+      
+    } else if (matches(["hola", "que onda", "buenos dias", "buenas tardes", "buenas noches", "saludos", "hey", "quiubole", "que tal", "alo", "oiga", "hello", "hi", "good morning", "good afternoon", "good evening"])) {
+      if (isEnglish) {
+        appendMessage("Hello there! Please let me know how I can assist you today.", "bot");
+      } else {
+        appendMessage("¡Hola de nuevo! Dime, ¿en qué te puedo asistir ahora?", "bot");
+      }
+
+    } else if (matches(["domicilio", "reparto", "repartidor", "envio", "mandado", "moto", "motomandado", "traer", "llevan", "casa", "delivery", "shipping", "send", "home"])) {
+      if (isEnglish) {
+        appendMessage("🏍️ **Delivery / Takeout:**\nWe prepare everything fresh. You can pick it up at our location, or build your order in the cart and send it to us via WhatsApp to arrange delivery with your preferred local courier service.", "bot");
+      } else {
+        appendMessage("🏍️ **Servicio a Domicilio / Para Llevar:**\nPreparamos todo al momento para que lo recojas en sucursal o puedes armar tu pedido en el carrito y enviárnoslo por WhatsApp para coordinar el envío con tu repartidor de confianza.", "bot");
+      }
+
+    } else if (matches(["pago", "pagar", "efectivo", "tarjeta", "transferencia", "aceptan", "cobran", "cuenta", "payment", "pay", "cash", "card", "transfer", "accept"])) {
+      if (isEnglish) {
+        appendMessage("💳 **Payment Methods:**\nWe accept **cash** payments directly at our location and **bank transfers** once you confirm your order via WhatsApp.", "bot");
+      } else {
+        appendMessage("💳 **Formas de Pago:**\nAceptamos pagos en **efectivo** directamente en sucursal y **transferencias bancarias** al confirmar tu pedido por WhatsApp.", "bot");
+      }
+
+    } else if (matches(["fresco", "calidad", "recalentado", "malo", "limpio", "preparacion", "fresh", "quality", "grill", "cook", "reheated"])) {
+      if (isEnglish) {
+        appendMessage("🔥 **Steak House Guarantee:**\nWe don't take shortcuts here. Nothing is stored or reheated. Each Cheesesteak is freshly cooked on the grill specifically for you the exact moment you confirm your order.", "bot");
+      } else {
+        appendMessage("🔥 **Garantía Steak House:**\nAquí no tomamos atajos. Nada se almacena ni se recalienta. Cada Cheesesteak se cocina en la plancha especialmente para ti en el momento exacto en que confirmas tu orden.", "bot");
+      }
+
+    } else {
+      // Mensaje de ayuda bilingüe si no entiende la palabra
+      if (isEnglish) {
+        appendMessage("I'm sorry, I couldn't quite understand your question. 😅 Try asking me using simple words like:\n\n• **Menu** (Prices and food)\n• **Hours** (Opening times)\n• **Location** (Where we are)\n• **Order** (How to buy)\n• **Delivery** (Shipping info)\n• **Payment** (How to pay)", "bot");
+      } else {
+        appendMessage("Lo siento, no alcancé a comprender tu duda. 😅 Puedes intentar preguntarme usando palabras sencillas como:\n\n• **Menú** (Precios y comida)\n• **Horario** (A qué hora abrimos)\n• **Ubicación** (Dónde estamos)\n• **Contacto** (Teléfono)\n• **Domicilio** (Envíos)\n• **Pago** (Cómo pagar)", "bot");
+      }
+    }
+  }
+})();
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    document.getElementById("preloader").classList.add("hide");
+  }, 1200);
+});
 
 </script>
 </body>
